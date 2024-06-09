@@ -70,7 +70,7 @@ class RunCommand extends Command
 
         /**
          * Install package globally.
-         * 
+         *
          * If the packages `keywords` property contains `dev`, `testing`, or `static analysis`,
          * then add on `--dev` to the composer command. Save this to a variable for use in cleanup.
          */
@@ -133,7 +133,8 @@ class RunCommand extends Command
     {
         $this->info('checking package for binary...');
         $binary = $latest_package_data['bin'][0];
-        $bin = explode('/', $binary)[1];
+//        $bin = explode('/', $binary)[1];
+        $bin = $binary;
 
         return $bin;
     }
